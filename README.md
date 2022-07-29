@@ -2,4 +2,8 @@
 Experiment on camera for face detection using ml-kit and cameraX 
 
 GraphicOverlay.kt - Composable to draw rectangle around face.
-CameraManager.kt - rememberCameraManager() to be used in Composables. 
+
+CameraManager.kt - rememberCameraManager() to be used in Composables for camera access.
+
+
+![camx](https://user-images.githubusercontent.com/16316615/181817325-49449ac1-ba41-499b-b2fb-6ebb28068911.gif)
