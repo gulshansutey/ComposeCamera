@@ -1,4 +1,4 @@
-package com.gulshansutey.composecamera
+package com.gulshansutey.composecamera.ui.screen
 
 import android.content.res.Configuration
 import android.graphics.Rect
@@ -13,6 +13,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
 import com.google.mlkit.vision.face.Face
+import com.gulshansutey.composecamera.camera.GraphicOverlay
+import com.gulshansutey.composecamera.camera.PreviewSize
+import com.gulshansutey.composecamera.camera.analyzer.FaceDetectionAnalyzer
+import com.gulshansutey.composecamera.camera.analyzer.OnFaceDetectedListener
+import com.gulshansutey.composecamera.camera.getCameraProvider
+import com.gulshansutey.composecamera.camera.rememberCameraManager
 
 @Composable
 fun CameraPreview(
@@ -61,7 +67,7 @@ fun CameraPreview(
             cameraManager.startCamera()
         }
 
-        LaunchedEffect(lensFacing){
+        LaunchedEffect(lensFacing) {
             cameraManager.switchCamera(lensFacing)
         }
 

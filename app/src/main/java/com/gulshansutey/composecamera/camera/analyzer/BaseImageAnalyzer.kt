@@ -1,4 +1,4 @@
-package com.gulshansutey.composecamera
+package com.gulshansutey.composecamera.camera.analyzer
 
 import android.annotation.SuppressLint
 import android.graphics.Rect

@@ -1,4 +1,4 @@
-package com.gulshansutey.composecamera
+package com.gulshansutey.composecamera.ui.screen
 
 import androidx.camera.core.CameraSelector
 import androidx.compose.foundation.background
@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.gulshansutey.composecamera.R
 import com.gulshansutey.composecamera.ui.theme.Camera_Preview_Option_Overlay
 
 @Composable

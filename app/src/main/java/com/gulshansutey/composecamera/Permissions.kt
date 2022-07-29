@@ -9,11 +9,10 @@ import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.PermissionStatus
 import com.google.accompanist.permissions.rememberPermissionState
 
-
 @ExperimentalPermissionsApi
 @Composable
 fun RequireCameraPermission(
-    rationale: String = "This permission is important for this app. Please grant the permission.",
+    rationale: String = "Please grant camera permission",
     content: @Composable () -> Unit = { }
 ) {
     val permissionState = rememberPermissionState(android.Manifest.permission.CAMERA)
@@ -44,7 +43,7 @@ private fun Rationale(
     onRequestPermission: () -> Unit
 ) {
     AlertDialog(
-        onDismissRequest = { /* Don't */ },
+        onDismissRequest = { /*no-op*/ },
         title = {
             Text(text = "Permission request")
         },

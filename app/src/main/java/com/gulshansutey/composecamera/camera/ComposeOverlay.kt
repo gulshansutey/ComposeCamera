@@ -1,10 +1,8 @@
-package com.gulshansutey.composecamera
+package com.gulshansutey.composecamera.camera
 
 import android.graphics.Rect
 import android.graphics.RectF
 import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
@@ -31,7 +29,7 @@ fun GraphicOverlay(
         return
     }
 
-    Box(
+    Canvas(
         modifier = Modifier
             .width(previewSize.previewWidth.dp)
             .height(previewSize.previewHeight.dp)
@@ -47,17 +45,14 @@ fun GraphicOverlay(
                 isFrontCamera,
                 it.boundingBox
             ).apply {
-                Canvas(modifier = Modifier.fillMaxSize()) {
-                    drawRect(
-                        color = Color.Yellow,
-                        topLeft = Offset(left, top),
-                        size = Size(width(), height()),
-                        style = Stroke(width = 5f)
-                    )
-                }
+                drawRect(
+                    color = Color.Yellow,
+                    topLeft = Offset(left, top),
+                    size = Size(width(), height()),
+                    style = Stroke(width = 5f)
+                )
             }
         }
-
     }
 
 }

@@ -1,4 +1,4 @@
-package com.gulshansutey.composecamera
+package com.gulshansutey.composecamera.camera.analyzer
 
 import android.graphics.Rect
 import com.google.mlkit.vision.common.InputImage

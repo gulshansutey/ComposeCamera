@@ -1,7 +1,10 @@
-package com.gulshansutey.composecamera
+package com.gulshansutey.composecamera.camera
 
 import android.content.Context
-import androidx.camera.core.*
+import androidx.camera.core.Camera
+import androidx.camera.core.CameraSelector
+import androidx.camera.core.ImageAnalysis
+import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.compose.runtime.Composable
@@ -75,7 +78,6 @@ fun rememberCameraManager(
     previewView: PreviewView,
     cameraProvider: ProcessCameraProvider
 ): ICameraManager {
-    println("rememberCameraManager")
     val lifecycleOwner = LocalLifecycleOwner.current
     val cameraManager = remember {
         CameraManager(
